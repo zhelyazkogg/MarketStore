@@ -6,19 +6,17 @@ package Cards;
  * */
 public class Bronze extends CardInformation {
     public Bronze(CardHolder cardHolder){
-        super(CardType.BRONZE, cardHolder, 0)
+        super(cardHolder, CardType.BRONZE, 0);
     }
 
     @Override
     public double cardRate(){
         if (getTurnover() < 100){
-            return initialRate;
+            return getInitialRate();
         }
         if (getTurnover() >=100 || getTurnover() <= 300){
             return 1;
         }
-        if (getTurnover() > 300){
-            return 2.5;
-        }
+        return 2.5;
     }
 }

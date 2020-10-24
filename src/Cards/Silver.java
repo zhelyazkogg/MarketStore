@@ -7,7 +7,7 @@ package Cards;
 
 public class Silver extends CardInformation {
     public Silver(CardHolder cardHolder){
-        super(CardType.SILVER, cardHolder, 2)
+        super(cardHolder, CardType.BRONZE, 2);
     }
 
     @Override
